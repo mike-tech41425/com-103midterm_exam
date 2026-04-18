@@ -1,6 +1,12 @@
 print("===weekly expenses===")
 name = input("Enter student name: ")
-budget = float(input("Enter weekly budget: "))
+while True:
+    try:
+        budget = float(input("Enter weekly budget: "))
+        break
+    except ValueError:
+        print("Invalid input. Please enter a number for the budget.")
+
 print("==================================================")
 print("\nCategories:")
 print("1. Food                  [e.g. Lunch, snacks, coffee]")
